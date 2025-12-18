@@ -2,8 +2,8 @@
 // https://leetcode.com/problems/next-greater-element-i/description/
 
 var nextGreaterElement = function (nums1, nums2) {
-  const stack = [];
-  const map = {};
+  const stack = [];// If present in the stack means: "It has not next great number"
+  const map = {}; // if present in map means: "there is next great and is save it as a key value"
 
   for (let n of nums2) {
     while (stack.length && n > stack[stack.length - 1]) {
